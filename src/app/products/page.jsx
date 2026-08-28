@@ -4,6 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import moringaImg from "../../../public/images/moringa-product.png";
+import beetrootImg from "../../../public/images/beetroot-product.jpg";
+import carrotImg from "../../../public/images/carrot-product.jpg";
+import amlaImg from "../../../public/images/amla-product.jpg";
 import "@/styles/Products.css";
 
 /* ============================================================
@@ -53,7 +56,8 @@ const AVAILABLE_PRODUCTS = [
       "No artificial additives",
       "Vegan & plant-based",
     ],
-    hasImage: false,
+    hasImage: true,
+    imageSrc: beetrootImg,
     phClass: "prod-card__ph--beetroot",
     phIcon: "🍀",
     featured: false,
@@ -66,12 +70,13 @@ const AVAILABLE_PRODUCTS = [
       "Sun-dried carrot powder that brings the natural goodness of fresh carrots into a convenient, easy-to-use form. Perfect for adding to soups, smoothies and baked goods.",
     tags: ["100% Natural", "Sun-Dried", "Vegan"],
     features: [
-      "Made from sun-dried carrots",
-      "Natural sweet flavour",
-      "No preservatives",
-      "Vegan & plant-based",
+      "Naturally sweet flavour",
+      "Rich in beta-carotene",
+      "No added sugar",
+      "Versatile cooking ingredient",
     ],
-    hasImage: false,
+    hasImage: true,
+    imageSrc: carrotImg,
     phClass: "prod-card__ph--carrot",
     phIcon: "🥕",
     featured: false,
@@ -79,17 +84,18 @@ const AVAILABLE_PRODUCTS = [
   {
     id: "amla",
     name: "Amla Powder",
-    tagline: "India's Favourite Superfruit",
+    tagline: "The Immunity Superfruit",
     desc:
-      "Made from Indian gooseberry (Amla) — one of the most respected superfruits in traditional Indian wellness. Pure, natural Amla powder with no fillers, additives or preservatives.",
-    tags: ["100% Natural", "No Fillers", "Vegan", "Made in India"],
+      "Made from Indian gooseberry — one of nature's most revered superfruits. Packed with natural Vitamin C, it's a powerful addition to your daily wellness routine.",
+    tags: ["100% Natural", "Immunity", "Vitamin C"],
     features: [
-      "Made from Indian gooseberries",
-      "No fillers or additives",
-      "Traditional natural ingredient",
-      "Vegan & plant-based",
+      "High natural Vitamin C",
+      "Traditional superfruit",
+      "Immunity boosting properties",
+      "Pure and unsweetened",
     ],
-    hasImage: false,
+    hasImage: true,
+    imageSrc: amlaImg,
     phClass: "prod-card__ph--amla",
     phIcon: "🫐",
     featured: false,

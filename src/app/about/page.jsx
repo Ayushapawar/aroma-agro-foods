@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
 import logoImg from "../../../public/images/logo.png";
 import moringaImg from "../../../public/images/moringa-product.png";
+import beetrootImg from "../../../public/images/beetroot-product.jpg";
+import carrotImg from "../../../public/images/carrot-product.jpg";
+import amlaImg from "../../../public/images/amla-product.jpg";
 import "@/styles/About.css";
 
 /* ============================================================
@@ -53,7 +56,8 @@ const AVAILABLE_PRODUCTS = [
     id: "beetroot",
     name: "Beetroot Powder",
     desc: "Pure, vibrant beetroot in convenient powder form — a naturally colourful addition to your daily routine.",
-    hasImage: false,
+    hasImage: true,
+    imageSrc: beetrootImg,
     placeholderClass: "product-card__placeholder--beetroot",
     icon: "🍀",
   },
@@ -61,7 +65,8 @@ const AVAILABLE_PRODUCTS = [
     id: "carrot",
     name: "Carrot Powder",
     desc: "Sun-dried, naturally sweet carrot powder — an easy way to add the goodness of carrots to your food.",
-    hasImage: false,
+    hasImage: true,
+    imageSrc: carrotImg,
     placeholderClass: "product-card__placeholder--carrot",
     icon: "🥕",
   },
@@ -69,7 +74,8 @@ const AVAILABLE_PRODUCTS = [
     id: "amla",
     name: "Amla Powder",
     desc: "Made from Indian gooseberry — one of nature's most revered superfruits in a simple, usable form.",
-    hasImage: false,
+    hasImage: true,
+    imageSrc: amlaImg,
     placeholderClass: "product-card__placeholder--amla",
     icon: "🫐",
   },
@@ -556,5 +562,7 @@ export default function AboutPage() {
     </>
   );
 }
+
+
 
 
