@@ -182,21 +182,6 @@ export default function ProductsPage() {
                 )}
               </ul>
             </div>
-
-            {/* Hero image — Moringa product */}
-            <div className="prod-hero__visual">
-              <div className="prod-hero__img-wrap">
-                <div className="prod-hero__glow" aria-hidden="true" />
-                <Image
-                  src={moringaImg}
-                  alt="Aroma Agro Foods – Moringa Powder product packaging"
-                  width={900}
-                  height={480}
-                  priority
-                  className="prod-hero__img"
-                />
-              </div>
-            </div>
           </div>
         </section>
 

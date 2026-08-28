@@ -59,18 +59,6 @@ export default function Hero() {
             ))}
           </ul>
         </div>
-
-        {/* ---- Right visual: botanical artwork ---- */}
-        <div className="hero__visual" aria-hidden="true">
-          <div className="hero__circle hero__circle--outer" />
-          <div className="hero__circle hero__circle--middle" />
-          <div className="hero__circle hero__circle--inner" />
-          <div className="hero__visual-text">
-            <span className="hero__visual-leaf">🌿</span>
-            <span className="hero__visual-brand">Aroma</span>
-            <span className="hero__visual-sub">Agro Foods</span>
-          </div>
-        </div>
       </div>
     </section>
   );

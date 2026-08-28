@@ -101,19 +101,21 @@
 .hero__inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 60px;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
-/* ---- Content (left) ---- */
+/* ---- Content ---- */
 .hero__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  max-width: 700px;
 }
 
 /* Badge */
@@ -382,29 +384,6 @@
     min-height: auto;
   }
 
-  .hero__inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .hero__content {
-    align-items: center;
-  }
-
-  .hero__description {
-    max-width: 100%;
-  }
-
-  .hero__trust {
-    justify-content: center;
-  }
-
-  .hero__visual {
-    order: -1;
-    max-width: 280px;
-  }
-
   .hero__decor--leaf-1,
   .hero__decor--leaf-2,
   .hero__decor--leaf-3 {
@@ -447,13 +426,5 @@
 
   .trust-point__label {
     font-size: 0.75rem;
-  }
-
-  .hero__visual {
-    max-width: 220px;
-  }
-
-  .hero__visual-brand {
-    font-size: 1.4rem;
   }
 }

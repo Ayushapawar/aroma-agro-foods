@@ -173,22 +173,6 @@ export default function AboutPage() {
                 Nourish Naturally. Live Vibrantly.
               </p>
             </div>
-
-            {/* Visual — spinning border logo circle */}
-            <div className="about-hero__visual" aria-hidden="true">
-              <div className="about-hero__img-frame">
-                <div className="about-hero__img-inner">
-                  <Image
-                    src={logoImg}
-                    alt="Aroma Agro Foods logo"
-                    width={240}
-                    height={240}
-                    priority
-                    className="about-hero__logo-img"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
