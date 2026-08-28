@@ -4,6 +4,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
+import logoImg from "../../../public/images/logo.png";
+import moringaImg from "../../../public/images/moringa-product.png";
 import "@/styles/About.css";
 
 /* ============================================================
@@ -43,7 +45,7 @@ const AVAILABLE_PRODUCTS = [
     name: "Moringa Powder",
     desc: "A versatile green superfood powder from the Moringa Oleifera plant — rich in natural nutrients.",
     hasImage: true,
-    imageSrc: "/images/moringa-product.png",
+    imageSrc: moringaImg,
     placeholderClass: "product-card__placeholder--moringa",
     icon: "🌿",
   },
@@ -193,7 +195,7 @@ export default function AboutPage() {
               <div className="about-hero__img-frame">
                 <div className="about-hero__img-inner">
                   <Image
-                    src="/images/logo.png"
+                    src={logoImg}
                     alt="Aroma Agro Foods logo"
                     width={240}
                     height={240}
@@ -259,7 +261,7 @@ export default function AboutPage() {
               <div className="about-story__img-wrapper">
                 <div className="about-story__img-bg" aria-hidden="true" />
                 <Image
-                  src="/images/moringa-product.png"
+                  src={moringaImg}
                   alt="Aroma Agro Foods – Moringa Powder product packaging"
                   width={900}
                   height={480}

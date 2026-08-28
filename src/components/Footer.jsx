@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "../../public/images/logo.png";
 import "../styles/Footer.css";
 
 const NAV_LINKS = [
@@ -30,8 +31,8 @@ export default function Footer() {
         <div className="footer__brand">
           <Link href="/" aria-label="Aroma Agro Foods – Home">
             <Image
-              src="/images/logo.png"
-              alt="Aroma Agro Foods"
+              src={logoImg}
+              alt="Aroma Agro Foods logo"
               width={160}
               height={50}
               className="footer__logo"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
+import moringaImg from "../../../public/images/moringa-product.png";
 import "@/styles/Products.css";
 
 /* ============================================================
@@ -34,7 +35,7 @@ const AVAILABLE_PRODUCTS = [
       "Packed in food-grade packaging",
     ],
     hasImage: true,
-    imageSrc: "/images/moringa-product.png",
+    imageSrc: moringaImg,
     phClass: "prod-card__ph--moringa",
     phIcon: "🌿",
     featured: true,
@@ -181,7 +182,7 @@ export default function ProductsPage() {
               <div className="prod-hero__img-wrap">
                 <div className="prod-hero__glow" aria-hidden="true" />
                 <Image
-                  src="/images/moringa-product.png"
+                  src={moringaImg}
                   alt="Aroma Agro Foods – Moringa Powder product packaging"
                   width={900}
                   height={480}

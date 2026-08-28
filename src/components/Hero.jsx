@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import moringaImg from "../../public/images/moringa-product.png";
 import "../styles/Hero.css";
 
 const TRUST_BADGES = [
@@ -46,28 +47,27 @@ export default function Hero() {
             ))}
           </ul>
 
-          {/* CTA Buttons */}
           <div className="hero__actions">
-            <Link href="/products" className="btn--primary" aria-label="View our Moringa product">
-              🛒 View Product
+            <Link href="/products" className="btn--primary">
+              View Product
             </Link>
-            <a href="#contact" className="btn--outline" aria-label="Enquire about our products">
-              ✉️ Enquire Now
+            <a href="#contact" className="btn--outline">
+              Enquire Now
             </a>
           </div>
         </div>
 
-        {/* ---- Right: Product Image ---- */}
+        {/* ---- Right: Visual ---- */}
         <div className="hero__visual">
-          <div className="hero__img-wrapper hero__img-wrapper--landscape">
-            <div className="hero__img-glow" aria-hidden="true" />
+          <div className="hero__img-wrap">
+            <div className="hero__glow" aria-hidden="true" />
             <Image
-              src="/images/moringa-product.png"
-              alt="Aroma Agro Foods – 100% Pure Moringa Powder – front and back of pack"
+              src={moringaImg}
+              alt="Aroma Agro Foods - Moringa Powder 100g and 250g pack"
               width={900}
               height={480}
               priority
-              className="hero__product-img"
+              className="hero__img"
             />
           </div>
         </div>

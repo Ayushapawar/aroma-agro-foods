@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import logoImg from "../../public/images/logo.png";
 import "../styles/Header.css";
 
 const NAV_LINKS = [
@@ -31,7 +32,7 @@ export default function Header() {
         {/* ---- Logo ---- */}
         <Link href="/" className="header__logo" aria-label="Aroma Agro Foods – Home">
           <Image
-            src="/images/logo.png"
+            src={logoImg}
             alt="Aroma Agro Foods logo"
             width={180}
             height={56}
@@ -105,3 +106,4 @@ export default function Header() {
     </header>
   );
 }
+
