@@ -11,7 +11,6 @@ const nextConfig = {
 
   // When on GitHub Pages, prefix all paths with /aroma-agro-foods
   basePath: isGithubPages ? "/aroma-agro-foods" : "",
-  assetPrefix: isGithubPages ? "/aroma-agro-foods/" : "",
 
   // next/image optimization requires a server — disable for static export
   images: {
