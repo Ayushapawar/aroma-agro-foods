@@ -19,7 +19,7 @@ const AVAILABLE_PRODUCTS = [
   "Amla Powder",
 ];
 
-const COMING_SOON_PRODUCTS = ["Juice Powder", "Soup Powder", "Plant Protein"];
+
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -90,16 +90,6 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            {COMING_SOON_PRODUCTS.map((name) => (
-              <li key={name}>
-                <span className="footer__link footer__link--soon">
-                  {name}{" "}
-                  <span className="footer__soon-tag" aria-label="Coming soon">
-                    Soon
-                  </span>
-                </span>
-              </li>
-            ))}
           </ul>
         </div>
 
@@ -148,3 +138,4 @@ export default function Footer() {
     </footer>
   );
 }
+

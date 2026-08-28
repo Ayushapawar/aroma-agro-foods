@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Aroma Agro Foods – Nourish Naturally, Live Vibrantly",
   description:
-    "Aroma Agro Foods offers premium 100% natural Moringa Powder and healthy food products sourced from the finest Indian farms. Coming soon: Juice Powder, Soup Powder, Plant Protein.",
+    "Aroma Agro Foods offers premium 100% natural Moringa Powder and healthy food products sourced from the finest Indian farms.",
   keywords: [
     "Moringa Powder",
     "Natural food products",

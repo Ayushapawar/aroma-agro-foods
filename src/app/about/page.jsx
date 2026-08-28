@@ -75,29 +75,7 @@ const AVAILABLE_PRODUCTS = [
   },
 ];
 
-const COMING_SOON_PRODUCTS = [
-  {
-    id: "juice",
-    name: "Juice Powder",
-    desc: "Convenient, natural fruit and vegetable juice in powder form. Coming soon.",
-    placeholderClass: "product-card__placeholder--juice",
-    icon: "🥤",
-  },
-  {
-    id: "soup",
-    name: "Soup Powder",
-    desc: "Nourishing, natural soup powders crafted from wholesome ingredients. Coming soon.",
-    placeholderClass: "product-card__placeholder--soup",
-    icon: "🍵",
-  },
-  {
-    id: "protein",
-    name: "Plant Protein",
-    desc: "A clean, plant-based protein powder for those who value natural nutrition. Coming soon.",
-    placeholderClass: "product-card__placeholder--protein",
-    icon: "💪",
-  },
-];
+
 
 const JOURNEY_STEPS = [
   {
@@ -401,55 +379,7 @@ export default function AboutPage() {
               ))}
             </ul>
 
-            {/* Coming soon */}
-            <p
-              className="about-products__group-label"
-              style={{ marginTop: "48px" }}
-              aria-label="Coming soon products"
-            >
-              🔜 Coming Soon
-            </p>
-            <ul
-              className="about-products__grid about-products__grid--coming"
-              role="list"
-              aria-label="Products coming soon"
-            >
-              {COMING_SOON_PRODUCTS.map((product) => (
-                <li
-                  key={product.id}
-                  className="product-card product-card--coming"
-                >
-                  <span
-                    className="product-card__badge product-card__badge--soon"
-                    aria-label="Coming soon"
-                  >
-                    Coming Soon
-                  </span>
-
-                  <div className="product-card__img-wrap">
-                    <div
-                      className={`product-card__placeholder ${product.placeholderClass}`}
-                      aria-hidden="true"
-                    >
-                      <span className="product-card__placeholder-icon">
-                        {product.icon}
-                      </span>
-                      <span className="product-card__placeholder-name">
-                        {product.name}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="product-card__body">
-                    <h3 className="product-card__name">{product.name}</h3>
-                    <p className="product-card__desc">{product.desc}</p>
-                    <p className="product-card__coming-note">
-                      🔔 Stay tuned — launching soon!
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            
           </div>
         </section>
 
@@ -626,3 +556,5 @@ export default function AboutPage() {
     </>
   );
 }
+
+
