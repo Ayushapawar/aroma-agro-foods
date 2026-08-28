@@ -1,74 +1,74 @@
-import Image from "next/image";
 import Link from "next/link";
-import moringaImg from "../../public/images/moringa-product.png";
 import "../styles/Hero.css";
 
-const TRUST_BADGES = [
-  { icon: "✓", label: "100% Natural" },
-  { icon: "🌿", label: "Chemical Free" },
+const TRUST_POINTS = [
+  { icon: "🌿", label: "Natural Ingredients" },
+  { icon: "✓", label: "Quality Focused" },
   { icon: "🇮🇳", label: "Made in India" },
-  { icon: "🏅", label: "FSSAI Certified" },
 ];
 
 export default function Hero() {
   return (
     <section className="hero" aria-label="Hero section">
+      {/* Decorative botanical elements */}
+      <div className="hero__decor hero__decor--1" aria-hidden="true" />
+      <div className="hero__decor hero__decor--2" aria-hidden="true" />
+      <div className="hero__decor hero__decor--3" aria-hidden="true" />
+      <div className="hero__decor hero__decor--leaf-1" aria-hidden="true">🌿</div>
+      <div className="hero__decor hero__decor--leaf-2" aria-hidden="true">🍃</div>
+      <div className="hero__decor hero__decor--leaf-3" aria-hidden="true">🌱</div>
+
       <div className="hero__inner">
-        {/* ---- Left: Content ---- */}
+        {/* ---- Main Content ---- */}
         <div className="hero__content">
           <p className="hero__badge">
-            <span className="hero__badge-icon" aria-hidden="true">🌿</span>
-            Pure &amp; Natural Superfood
+            <span className="hero__badge-dot" aria-hidden="true" />
+            PURE &bull; NATURAL &bull; EVERYDAY WELLNESS
           </p>
 
           <h1 className="hero__heading">
             Nourish{" "}
             <span className="hero__heading-accent">Naturally,</span>
             <br />
-            Live Vibrantly
+            Live <span className="hero__heading-accent">Vibrantly.</span>
           </h1>
 
-          <p className="hero__subheading">100% Pure Moringa Powder</p>
-
           <p className="hero__description">
-            Sourced from the finest Moringa Oleifera farms across India,
-            our premium powder is gently dried and finely milled to preserve
-            every nutrient — delivering nature&apos;s most powerful green superfood
-            straight to your table.
+            Discover natural goodness from Aroma Agro Foods, thoughtfully
+            created for your everyday lifestyle.
           </p>
-
-          {/* Trust badges */}
-          <ul className="hero__trust" role="list" aria-label="Product certifications">
-            {TRUST_BADGES.map(({ icon, label }) => (
-              <li key={label} className="trust-badge">
-                <span className="trust-badge__icon" aria-hidden="true">{icon}</span>
-                {label}
-              </li>
-            ))}
-          </ul>
 
           <div className="hero__actions">
             <Link href="/products" className="btn--primary">
-              View Product
+              Explore Products
             </Link>
-            <a href="#contact" className="btn--outline">
+            <Link href="/enquiry" className="btn--outline">
               Enquire Now
-            </a>
+            </Link>
           </div>
+
+          {/* Trust points */}
+          <ul className="hero__trust" role="list" aria-label="Our values">
+            {TRUST_POINTS.map(({ icon, label }) => (
+              <li key={label} className="trust-point">
+                <span className="trust-point__icon" aria-hidden="true">
+                  {icon}
+                </span>
+                <span className="trust-point__label">{label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* ---- Right: Visual ---- */}
-        <div className="hero__visual">
-          <div className="hero__img-wrap">
-            <div className="hero__glow" aria-hidden="true" />
-            <Image
-              src={moringaImg}
-              alt="Aroma Agro Foods - Moringa Powder 100g and 250g pack"
-              width={900}
-              height={480}
-              priority
-              className="hero__img"
-            />
+        {/* ---- Right visual: botanical artwork ---- */}
+        <div className="hero__visual" aria-hidden="true">
+          <div className="hero__circle hero__circle--outer" />
+          <div className="hero__circle hero__circle--middle" />
+          <div className="hero__circle hero__circle--inner" />
+          <div className="hero__visual-text">
+            <span className="hero__visual-leaf">🌿</span>
+            <span className="hero__visual-brand">Aroma</span>
+            <span className="hero__visual-sub">Agro Foods</span>
           </div>
         </div>
       </div>

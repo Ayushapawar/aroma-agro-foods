@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PromoBanner from "@/components/PromoBanner";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
@@ -16,6 +17,7 @@ export default function HomePage() {
 
       <main id="main-content" tabIndex={-1}>
         <Hero />
+        <PromoBanner />
         <WhyChooseUs />
       </main>
 

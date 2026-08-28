@@ -1,0 +1,106 @@
+/* ===========================
+   PromoBanner — Auto-scrolling strip
+   =========================== */
+
+.promo-banner {
+  background: linear-gradient(135deg, var(--color-green-dark) 0%, #1a5e1a 50%, var(--color-green-dark) 100%);
+  overflow: hidden;
+  position: relative;
+  padding: 14px 0;
+  border-top: 1px solid rgba(165, 214, 167, 0.2);
+  border-bottom: 1px solid rgba(165, 214, 167, 0.2);
+}
+
+/* Fade edges */
+.promo-banner::before,
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.promo-banner::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-green-dark), transparent);
+}
+
+.promo-banner::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-green-dark), transparent);
+}
+
+/* ---- Track ---- */
+.promo-banner__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.promo-banner:hover .promo-banner__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---- Item ---- */
+.promo-banner__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+.promo-banner__icon {
+  font-size: 1rem;
+}
+
+.promo-banner__text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.promo-banner__sep {
+  font-size: 0.5rem;
+  color: var(--color-gold);
+  opacity: 0.7;
+  margin-left: 10px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .promo-banner {
+    padding: 10px 0;
+  }
+
+  .promo-banner__text {
+    font-size: 0.75rem;
+  }
+
+  .promo-banner__item {
+    padding: 0 14px;
+    gap: 8px;
+  }
+
+  .promo-banner::before,
+  .promo-banner::after {
+    width: 40px;
+  }
+}
