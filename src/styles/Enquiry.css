@@ -1,0 +1,359 @@
+/* ===========================
+   Enquiry Page Styles
+   Aroma Agro Foods
+   =========================== */
+
+/* ---- Shared Buttons ---- */
+.enquiry-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 32px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.enquiry-btn--primary {
+  background: var(--color-green-primary);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+.enquiry-btn--primary:hover {
+  background: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.4);
+}
+
+.enquiry-btn--whatsapp {
+  background: #25D366; /* WhatsApp official green */
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.enquiry-btn--whatsapp:hover {
+  background: #1ebe58;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+}
+
+/* ================================================
+   1. HERO
+   ================================================ */
+.enquiry-hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-green-dark) 0%,
+    #2e7d32 60%,
+    #1b5e20 100%
+  );
+  padding: 80px var(--spacing-md) 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.enquiry-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.enquiry-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(197, 168, 90, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.enquiry-hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.enquiry-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.enquiry-hero__breadcrumb-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s ease;
+}
+
+.enquiry-hero__breadcrumb-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.enquiry-hero__breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+}
+
+.enquiry-hero__breadcrumb-current {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.enquiry-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.enquiry-hero__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin: 8px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.enquiry-hero__heading-accent {
+  color: var(--color-gold);
+}
+
+.enquiry-hero__subheading {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ================================================
+   2. ENQUIRY FORM
+   ================================================ */
+.enquiry-main {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-cream);
+}
+
+.enquiry-main__inner {
+  max-width: 800px; /* Centered form */
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.enquiry-form-wrapper {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(165, 214, 167, 0.3);
+}
+
+.enquiry-form__heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.enquiry-form__success,
+.enquiry-form__error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.enquiry-form__success {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #1b5e20;
+}
+
+.enquiry-form__error {
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #b71c1c;
+}
+
+.enquiry-form__section {
+  margin-bottom: 32px;
+}
+
+.enquiry-form__section:last-of-type {
+  margin-bottom: 24px;
+}
+
+.enquiry-form__section-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(165, 214, 167, 0.4);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-base);
+  background: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232e7d32%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 12px auto;
+  padding-right: 40px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-green-primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.form-submit {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-submit .enquiry-btn {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ================================================
+   3. WHATSAPP CTA
+   ================================================ */
+.enquiry-whatsapp {
+  padding: var(--spacing-xl) 0;
+  background: #fff;
+  text-align: center;
+}
+
+.enquiry-whatsapp__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.enquiry-whatsapp__heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 12px;
+}
+
+.enquiry-whatsapp__subtext {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 768px) {
+  .enquiry-form-wrapper {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .enquiry-hero {
+    padding: 60px var(--spacing-sm) 50px;
+  }
+  
+  .enquiry-form-wrapper {
+    padding: 24px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-submit .enquiry-btn {
+    max-width: 100%;
+  }
+}

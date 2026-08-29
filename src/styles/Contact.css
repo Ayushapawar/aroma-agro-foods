@@ -1,0 +1,463 @@
+/* ===========================
+   Contact Page Styles
+   Aroma Agro Foods
+   =========================== */
+
+/* ---- Shared Buttons ---- */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 32px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.contact-btn--primary {
+  background: var(--color-green-primary);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+.contact-btn--primary:hover {
+  background: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.4);
+}
+
+.contact-btn--whatsapp {
+  background: #25D366; /* WhatsApp official green */
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn--whatsapp:hover {
+  background: #1ebe58;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+}
+
+/* ================================================
+   1. HERO
+   ================================================ */
+.contact-hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-green-dark) 0%,
+    #2e7d32 60%,
+    #1b5e20 100%
+  );
+  padding: 80px var(--spacing-md) 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(197, 168, 90, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.contact-hero__breadcrumb-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s ease;
+}
+
+.contact-hero__breadcrumb-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-hero__breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+}
+
+.contact-hero__breadcrumb-current {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.contact-hero__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin: 8px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.contact-hero__heading-accent {
+  color: var(--color-gold);
+}
+
+.contact-hero__subheading {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ================================================
+   2. CONTACT MAIN (Info + Form Layout)
+   ================================================ */
+.contact-main {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-cream);
+}
+
+.contact-main__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+}
+
+/* ---- Contact Info ---- */
+.contact-info__heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 32px;
+}
+
+.contact-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-info__card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(165, 214, 167, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-info__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info__icon {
+  font-size: 2rem;
+  background: var(--color-green-pale);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-info__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 8px;
+}
+
+.contact-info__text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-info__text a {
+  color: var(--color-green-primary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-info__text a:hover {
+  color: var(--color-green-dark);
+  text-decoration: underline;
+}
+
+.contact-info__placeholder-text {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #888;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ---- Contact Form ---- */
+.contact-form-wrapper {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(165, 214, 167, 0.3);
+}
+
+.contact-form__heading {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 24px;
+}
+
+.contact-form__success,
+.contact-form__error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-form__success {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  color: #1b5e20;
+}
+
+.contact-form__error {
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #b71c1c;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-base);
+  background: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-green-primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.form-submit {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.form-submit .contact-btn {
+  width: 100%;
+}
+
+/* ================================================
+   3. WHATSAPP CTA
+   ================================================ */
+.contact-whatsapp {
+  padding: var(--spacing-xl) 0;
+  background: #fff;
+  text-align: center;
+}
+
+.contact-whatsapp__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.contact-whatsapp__heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 12px;
+}
+
+.contact-whatsapp__subtext {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ================================================
+   4. MAP PLACEHOLDER
+   ================================================ */
+.contact-map {
+  padding: 0 0 var(--spacing-xl);
+  background: #fff;
+}
+
+.contact-map__placeholder {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  height: 400px;
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed rgba(165, 214, 167, 0.5);
+  margin-inline: var(--spacing-md);
+}
+
+.contact-map__icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.contact-map__placeholder h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-green-dark);
+  margin-bottom: 8px;
+}
+
+.contact-map__placeholder p {
+  color: var(--color-text-muted);
+  max-width: 400px;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 900px) {
+  .contact-main__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .contact-info__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 60px var(--spacing-sm) 50px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 24px;
+  }
+  
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info__list {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-map__placeholder {
+    margin-inline: var(--spacing-sm);
+    height: 300px;
+  }
+}
