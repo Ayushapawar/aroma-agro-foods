@@ -1,0 +1,643 @@
+/* ===========================
+   Quality Page Styles
+   Aroma Agro Foods
+   =========================== */
+
+/* ---- Shared inner container ---- */
+.q-section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ---- Shared eyebrow ---- */
+.q-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green-primary);
+  margin-bottom: 10px;
+}
+
+/* ---- Shared section header ---- */
+.q-section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.q-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-green-dark);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.q-section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ---- Shared buttons ---- */
+.q-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.q-btn--primary {
+  background: var(--color-green-primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+.q-btn--primary:hover {
+  background: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.4);
+}
+
+.q-btn--outline {
+  background: transparent;
+  color: var(--color-green-primary);
+  border: 2px solid var(--color-green-primary);
+}
+
+.q-btn--outline:hover {
+  background: var(--color-green-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.q-btn--white {
+  background: #fff;
+  color: var(--color-green-dark);
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.q-btn--white:hover {
+  background: var(--color-cream);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.q-btn--outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.q-btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ================================================
+   1. HERO
+   ================================================ */
+.q-hero {
+  background: linear-gradient(
+    160deg,
+    var(--color-green-dark) 0%,
+    #2e7d32 60%,
+    #1b5e20 100%
+  );
+  padding: 80px var(--spacing-md) 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.q-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.q-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(197, 168, 90, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.q-hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.q-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.q-hero__breadcrumb-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.q-hero__breadcrumb-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.q-hero__breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+}
+
+.q-hero__breadcrumb-current {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.q-hero .q-eyebrow {
+  color: var(--color-gold);
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.q-hero__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin: 8px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.q-hero__heading-accent {
+  color: var(--color-gold);
+}
+
+.q-hero__subheading {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* ================================================
+   2. COMMITMENT
+   ================================================ */
+.q-commitment {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-cream);
+}
+
+.q-commitment__content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.q-commitment__lead {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  color: var(--color-green-dark);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.q-commitment__body {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.q-commitment__body:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================================
+   3. PROCESS — FROM NATURE TO YOU
+   ================================================ */
+.q-process {
+  padding: var(--spacing-xl) 0;
+  background: #fff;
+}
+
+.q-process__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.q-process__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 160px;
+  max-width: 200px;
+  position: relative;
+}
+
+/* Horizontal connector line */
+.q-process__step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: calc(50% + 32px);
+  width: calc(100% - 64px);
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-green-light),
+    var(--color-green-pale)
+  );
+  z-index: 0;
+}
+
+.q-process__step-number {
+  width: 56px;
+  height: 56px;
+  background: var(--color-green-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+  margin-bottom: 16px;
+}
+
+.q-process__step-card {
+  text-align: center;
+  padding: 16px 12px;
+  background: var(--color-green-pale);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(165, 214, 167, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+}
+
+.q-process__step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.q-process__step-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.q-process__step-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 6px;
+}
+
+.q-process__step-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ================================================
+   4. FOCUS CARDS
+   ================================================ */
+.q-focus {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-cream);
+}
+
+.q-focus__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.q-focus__card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(165, 214, 167, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+.q-focus__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.q-focus__card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.q-focus__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 10px;
+}
+
+.q-focus__card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ================================================
+   5. TRANSPARENCY
+   ================================================ */
+.q-transparency {
+  padding: var(--spacing-xl) 0;
+  background: #fff;
+}
+
+.q-transparency__card {
+  background: var(--color-green-pale);
+  border: 1px solid rgba(165, 214, 167, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.q-transparency__icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.q-transparency__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 20px;
+}
+
+.q-transparency__body {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.q-transparency__body:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* ================================================
+   6. CERTIFICATIONS
+   ================================================ */
+.q-certs {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-cream);
+}
+
+.q-certs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.q-certs__card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(165, 214, 167, 0.25);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.q-certs__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.q-certs__card--placeholder {
+  border: 2px dashed var(--color-green-light);
+  background: var(--color-green-pale);
+}
+
+.q-certs__card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.q-certs__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-green-dark);
+  margin-bottom: 10px;
+}
+
+.q-certs__card-body {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.q-certs__card-note {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-green-primary);
+  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+}
+
+/* ================================================
+   7. CTA
+   ================================================ */
+.q-cta {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-green-dark) 0%,
+    #2e7d32 100%
+  );
+}
+
+.q-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.q-cta__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.q-cta__subtext {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.q-cta__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 900px) {
+  .q-focus__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .q-process__steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .q-process__step {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .q-process__step::after {
+    display: none;
+  }
+
+  .q-process__step-number {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .q-process__step-card {
+    text-align: left;
+  }
+
+  .q-process__step-icon {
+    margin-bottom: 4px;
+  }
+
+  .q-certs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .q-transparency__card {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .q-hero {
+    padding: 56px var(--spacing-sm) 52px;
+  }
+
+  .q-focus__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .q-cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .q-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .q-transparency__card {
+    padding: 32px 20px;
+  }
+}
