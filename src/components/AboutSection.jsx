@@ -355,13 +355,13 @@ export default function AboutPage() {
                         View Product
                       </Link>
                       <a
-                        href="https://wa.me/917798281007"
+                        href={`https://wa.me/917798281007?text=Hello%20Aroma%20Agro%20Foods%2C%20I%20would%20like%20to%20buy%20${encodeURIComponent(product.name)}%20(100g).%20Please%20share%20the%20order%20details%20and%20payment%20information.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="product-card__btn product-card__btn--outline"
-                        aria-label={`Enquire about ${product.name}`}
+                        aria-label={`Buy ${product.name}`}
                       >
-                        Enquire
+                        🛒 Buy Now
                       </a>
                     </div>
                   </div>

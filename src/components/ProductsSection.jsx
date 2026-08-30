@@ -280,13 +280,13 @@ export default function ProductsPage() {
                     {/* Actions */}
                     <div className="prod-card__actions">
                       <a
-                        href={`https://wa.me/917798281007?text=Hello%20Aroma%20Agro%20Foods%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}.`}
+                        href={`https://wa.me/917798281007?text=Hello%20Aroma%20Agro%20Foods%2C%20I%20would%20like%20to%20buy%20${encodeURIComponent(product.name)}%20(100g).%20Please%20share%20the%20order%20details%20and%20payment%20information.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="prod-btn--primary"
-                        aria-label={`Enquire about ${product.name}`}
+                        aria-label={`Buy ${product.name}`}
                       >
-                        ✉️ Enquire Now
+                        🛒 Buy Now
                       </a>
                       <Link
                         href="#contact"
