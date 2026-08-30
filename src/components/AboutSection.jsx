@@ -1,10 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
-import logoImg from "../../public/images/logo.png";
 import moringaImg from "../../public/images/moringa-product.png";
 import beetrootImg from "../../public/images/beetroot-product.jpg";
 import carrotImg from "../../public/images/carrot-product.jpg";
@@ -125,14 +121,7 @@ const VISION_CHIPS = [
 
 export default function AboutPage() {
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="about">
         {/* ================================================
             1. ABOUT HERO
             ================================================ */}
@@ -539,11 +528,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+    </section>
   );
 }
 
