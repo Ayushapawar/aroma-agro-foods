@@ -8,38 +8,6 @@ import "@/styles/Quality.css";
 /* ============================================================
    DATA
    ============================================================ */
-const PROCESS_STEPS = [
-  {
-    step: "01",
-    icon: "🌱",
-    title: "Ingredient Selection",
-    desc: "We carefully source natural fruits, vegetables and plants, prioritising freshness and purity.",
-  },
-  {
-    step: "02",
-    icon: "⚙️",
-    title: "Processing",
-    desc: "Ingredients are cleaned, dried and milled using methods designed to preserve natural goodness.",
-  },
-  {
-    step: "03",
-    icon: "🔍",
-    title: "Quality Checks",
-    desc: "Each batch is reviewed to ensure it meets our internal quality standards before moving forward.",
-  },
-  {
-    step: "04",
-    icon: "📦",
-    title: "Hygienic Packaging",
-    desc: "Products are sealed in food-grade, airtight packaging to protect freshness from processing to delivery.",
-  },
-  {
-    step: "05",
-    icon: "🏡",
-    title: "Ready for You",
-    desc: "Your order is carefully packed and dispatched, ready to be part of your daily routine.",
-  },
-];
 
 const FOCUS_CARDS = [
   {
@@ -128,41 +96,6 @@ export default function QualityPage() {
           </div>
         </section>
 
-        {/* ================================================
-            3. FROM NATURE TO YOU — PROCESS
-            ================================================ */}
-        <section className="q-process" aria-labelledby="q-process-heading">
-          <div className="q-section-inner">
-            <header className="q-section-header">
-              <p className="q-eyebrow">Our Process</p>
-              <h2 className="q-section-title" id="q-process-heading">
-                From Nature to You
-              </h2>
-              <p className="q-section-subtitle">
-                Every product travels a careful, considered path before it
-                reaches your hands.
-              </p>
-            </header>
-
-            <ol className="q-process__steps" aria-label="Our quality process steps">
-              {PROCESS_STEPS.map((item) => (
-                <li key={item.step} className="q-process__step">
-                  <div className="q-process__step-number" aria-hidden="true">
-                    {item.step}
-                  </div>
-                  <div className="q-process__connector" aria-hidden="true" />
-                  <div className="q-process__step-card">
-                    <span className="q-process__step-icon" aria-hidden="true">
-                      {item.icon}
-                    </span>
-                    <h3 className="q-process__step-title">{item.title}</h3>
-                    <p className="q-process__step-desc">{item.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
         {/* ================================================
             4. WHAT WE FOCUS ON — CARDS
