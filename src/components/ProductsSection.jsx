@@ -1,22 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
-import moringaImg from "../../../public/images/moringa-product.png";
-import beetrootImg from "../../../public/images/beetroot-product.jpg";
-import carrotImg from "../../../public/images/carrot-product.jpg";
-import amlaImg from "../../../public/images/amla-product.jpg";
+import moringaImg from "../../public/images/moringa-product.png";
+import beetrootImg from "../../public/images/beetroot-product.jpg";
+import carrotImg from "../../public/images/carrot-product.jpg";
+import amlaImg from "../../public/images/amla-product.jpg";
 import "@/styles/Products.css";
 
 /* ============================================================
    PAGE METADATA
    ============================================================ */
-export const metadata = {
-  title: "Products – Aroma Agro Foods",
-  description:
-    "Explore Aroma Agro Foods' range of 100% natural food powders — Moringa Powder, Beetroot Powder, Carrot Powder and Amla Powder. Pure, natural and made in India.",
-};
 
 /* ============================================================
    DATA
@@ -131,14 +123,7 @@ const USP_ITEMS = [
 
 export default function ProductsPage() {
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="products">
 
         {/* ================================================
             1. HERO
@@ -304,7 +289,7 @@ export default function ProductsPage() {
                         ✉️ Enquire Now
                       </a>
                       <Link
-                        href="/contact"
+                        href="#contact"
                         className="prod-btn--outline"
                         aria-label={`Contact us about ${product.name}`}
                       >
@@ -372,7 +357,7 @@ export default function ProductsPage() {
                 💬 WhatsApp Us
               </a>
               <Link
-                href="/contact"
+                href="#contact"
                 className="prod-btn--outline"
                 style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
                 aria-label="Go to the contact page"
@@ -383,10 +368,6 @@ export default function ProductsPage() {
           </div>
         </section>
 
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+      </section>
   );
 }

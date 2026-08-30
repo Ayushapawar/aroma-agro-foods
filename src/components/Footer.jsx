@@ -85,7 +85,7 @@ export default function Footer() {
           <ul className="footer__links" role="list">
             {AVAILABLE_PRODUCTS.map((name) => (
               <li key={name}>
-                <Link href="/products" className="footer__link">
+                <Link href="#products" className="footer__link">
                   {name}
                 </Link>
               </li>

@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
 import "@/styles/Enquiry.css";
 
 export default function EnquiryPage() {
@@ -53,14 +50,7 @@ export default function EnquiryPage() {
   };
 
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="enquiry">
         {/* ================================================
             1. HERO
             ================================================ */}
@@ -270,10 +260,6 @@ export default function EnquiryPage() {
           </div>
         </section>
 
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+      </section>
   );
 }

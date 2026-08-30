@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
 import "@/styles/FAQ.css";
 
 /* ============================================================
@@ -143,14 +140,7 @@ export default function FaqPage() {
   };
 
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="faq">
 
         {/* ================================================
             1. HERO
@@ -231,20 +221,16 @@ export default function FaqPage() {
               will get back to you as soon as possible.
             </p>
             <div className="faq-cta__actions">
-              <Link href="/enquiry" className="faq-btn faq-btn--white">
+              <Link href="#enquiry" className="faq-btn faq-btn--white">
                 Enquire Now
               </Link>
-              <Link href="/contact" className="faq-btn faq-btn--outline-white">
+              <Link href="#contact" className="faq-btn faq-btn--outline-white">
                 Contact Us
               </Link>
             </div>
           </div>
         </section>
 
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+      </section>
   );
 }

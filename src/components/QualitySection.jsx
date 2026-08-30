@@ -1,17 +1,9 @@
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
 import "@/styles/Quality.css";
 
 /* ============================================================
    PAGE METADATA
    ============================================================ */
-export const metadata = {
-  title: "Our Quality – Aroma Agro Foods",
-  description:
-    "Learn about our commitment to quality at Aroma Agro Foods — from ingredient selection to hygienic packaging. Pure, natural and honestly made.",
-};
 
 /* ============================================================
    DATA
@@ -77,14 +69,7 @@ const FOCUS_CARDS = [
    ============================================================ */
 export default function QualityPage() {
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="quality">
 
         {/* ================================================
             1. HERO
@@ -229,7 +214,7 @@ export default function QualityPage() {
                 are happy to help. Visit our Products page or reach out to us
                 directly.
               </p>
-              <Link href="/products" className="q-btn q-btn--outline">
+              <Link href="#products" className="q-btn q-btn--outline">
                 View Our Products
               </Link>
             </div>
@@ -290,10 +275,10 @@ export default function QualityPage() {
                 ingredients or products.
               </p>
               <div className="q-cta__actions">
-                <Link href="/enquiry" className="q-btn q-btn--white">
+                <Link href="#enquiry" className="q-btn q-btn--white">
                   Enquire Now
                 </Link>
-                <Link href="/contact" className="q-btn q-btn--outline-white">
+                <Link href="#contact" className="q-btn q-btn--outline-white">
                   Contact Us
                 </Link>
               </div>
@@ -301,10 +286,6 @@ export default function QualityPage() {
           </div>
         </section>
 
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+      </section>
   );
 }

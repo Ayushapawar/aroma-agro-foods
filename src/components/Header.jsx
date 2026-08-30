@@ -7,12 +7,12 @@ import logoImg from "../../public/images/logo.png";
 import "../styles/Header.css";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Quality", href: "/quality" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Quality", href: "#quality" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -26,6 +26,26 @@ export default function Header() {
   const closeMenu = useCallback(() => {
     setMenuOpen(false);
   }, []);
+
+  const handleScroll = (e, href) => {
+    // Only intercept anchor links
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      closeMenu();
+      const targetId = href.substring(1);
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+        // Optionally update URL cleanly
+        window.history.pushState(null, "", href);
+      } else if (href === "#home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", "/");
+      }
+    } else {
+      closeMenu();
+    }
+  };
 
   /* Scroll listener — add solid bg + shadow after 40px */
   useEffect(() => {
@@ -47,8 +67,26 @@ export default function Header() {
       role="banner"
     >
       <div className="header__inner">
+        {/* ---- Hamburger (mobile) - MOVED TO LEFT ---- */}
+        <button
+          className={`header__hamburger${menuOpen ? " is-active" : ""}`}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={toggleMenu}
+        >
+          <span className="hamburger__bar" aria-hidden="true" />
+          <span className="hamburger__bar" aria-hidden="true" />
+          <span className="hamburger__bar" aria-hidden="true" />
+        </button>
+
         {/* ---- Logo ---- */}
-        <Link href="/" className="header__logo" aria-label="Aroma Agro Foods – Home">
+        <Link 
+          href="#home" 
+          className="header__logo" 
+          aria-label="Aroma Agro Foods – Home"
+          onClick={(e) => handleScroll(e, "#home")}
+        >
           <Image
             src={logoImg}
             alt="Aroma Agro Foods logo"
@@ -64,30 +102,26 @@ export default function Header() {
           <ul className="nav__list" role="list">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={label}>
-                <Link href={href} className="nav__link">
+                <a 
+                  href={href} 
+                  className="nav__link"
+                  onClick={(e) => handleScroll(e, href)}
+                >
                   {label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
 
-          <Link href="/enquiry" className="btn--enquire" aria-label="Enquire about our products">
+          <a 
+            href="#enquiry" 
+            className="btn--enquire" 
+            aria-label="Enquire about our products"
+            onClick={(e) => handleScroll(e, "#enquiry")}
+          >
             Enquire Now
-          </Link>
+          </a>
         </nav>
-
-        {/* ---- Hamburger (mobile) ---- */}
-        <button
-          className={`header__hamburger${menuOpen ? " is-active" : ""}`}
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          onClick={toggleMenu}
-        >
-          <span className="hamburger__bar" aria-hidden="true" />
-          <span className="hamburger__bar" aria-hidden="true" />
-          <span className="hamburger__bar" aria-hidden="true" />
-        </button>
       </div>
 
       {/* ---- Mobile Fullscreen Overlay ---- */}
@@ -101,25 +135,25 @@ export default function Header() {
           <ul className="mobile-nav__list" role="list">
             {NAV_LINKS.map(({ label, href }, i) => (
               <li key={label} style={{ animationDelay: `${0.05 + i * 0.06}s` }}>
-                <Link
+                <a
                   href={href}
                   className="mobile-nav__link"
-                  onClick={closeMenu}
+                  onClick={(e) => handleScroll(e, href)}
                 >
                   {label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
           <div className="mobile-nav__cta" style={{ animationDelay: "0.45s" }}>
-            <Link
-              href="/enquiry"
+            <a
+              href="#enquiry"
               className="btn--enquire"
-              onClick={closeMenu}
+              onClick={(e) => handleScroll(e, "#enquiry")}
               aria-label="Enquire about our products"
             >
               Enquire Now
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

@@ -4,11 +4,11 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsApp from "@/components/WhatsApp";
-import logoImg from "../../../public/images/logo.png";
-import moringaImg from "../../../public/images/moringa-product.png";
-import beetrootImg from "../../../public/images/beetroot-product.jpg";
-import carrotImg from "../../../public/images/carrot-product.jpg";
-import amlaImg from "../../../public/images/amla-product.jpg";
+import logoImg from "../../public/images/logo.png";
+import moringaImg from "../../public/images/moringa-product.png";
+import beetrootImg from "../../public/images/beetroot-product.jpg";
+import carrotImg from "../../public/images/carrot-product.jpg";
+import amlaImg from "../../public/images/amla-product.jpg";
 import "@/styles/About.css";
 
 /* ============================================================
@@ -348,7 +348,7 @@ export default function AboutPage() {
                     <p className="product-card__desc">{product.desc}</p>
                     <div className="product-card__actions">
                       <Link
-                        href="/products"
+                        href="#products"
                         className="product-card__btn product-card__btn--primary"
                         aria-label={`View ${product.name}`}
                       >
@@ -520,7 +520,7 @@ export default function AboutPage() {
             </p>
             <div className="about-cta__actions">
               <Link
-                href="/products"
+                href="#products"
                 className="about-btn--light"
                 aria-label="Explore our products"
               >

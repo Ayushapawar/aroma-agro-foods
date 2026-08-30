@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
             Foods for their daily nutrition.
           </p>
           <Link
-            href="/contact"
+            href="#contact"
             className="btn--cta-light"
             aria-label="Get in touch with us"
           >

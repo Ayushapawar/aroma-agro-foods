@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsApp from "@/components/WhatsApp";
 import "@/styles/Contact.css";
 
 export default function ContactPage() {
@@ -43,14 +40,7 @@ export default function ContactPage() {
   };
 
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Header />
-
-      <main id="main-content" tabIndex={-1}>
+    <section id="contact">
         {/* ================================================
             1. HERO
             ================================================ */}
@@ -265,10 +255,6 @@ export default function ContactPage() {
            </div>
         </section>
 
-      </main>
-
-      <Footer />
-      <WhatsApp />
-    </>
+      </section>
   );
 }

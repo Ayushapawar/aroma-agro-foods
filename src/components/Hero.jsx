@@ -39,10 +39,10 @@ export default function Hero() {
           </p>
 
           <div className="hero__actions">
-            <Link href="/products" className="btn--primary">
+            <Link href="#products" className="btn--primary">
               Explore Products
             </Link>
-            <Link href="/enquiry" className="btn--outline">
+            <Link href="#enquiry" className="btn--outline">
               Enquire Now
             </Link>
           </div>

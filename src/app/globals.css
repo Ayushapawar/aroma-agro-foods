@@ -133,3 +133,7 @@ ul, ol {
   background-color: rgba(76, 175, 80, 0.25);
   color: var(--color-green-dark);
 }
+
+body, html {
+  overflow-x: hidden;
+}
