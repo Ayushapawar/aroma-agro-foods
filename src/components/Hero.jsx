@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import moringaImg from "../../public/images/moringa-product.png";
 import "../styles/Hero.css";
 
 const TRUST_POINTS = [
@@ -9,17 +11,9 @@ const TRUST_POINTS = [
 
 export default function Hero() {
   return (
-    <section className="hero" aria-label="Hero section">
-      {/* Decorative botanical elements */}
-      <div className="hero__decor hero__decor--1" aria-hidden="true" />
-      <div className="hero__decor hero__decor--2" aria-hidden="true" />
-      <div className="hero__decor hero__decor--3" aria-hidden="true" />
-      <div className="hero__decor hero__decor--leaf-1" aria-hidden="true">🌿</div>
-      <div className="hero__decor hero__decor--leaf-2" aria-hidden="true">🍃</div>
-      <div className="hero__decor hero__decor--leaf-3" aria-hidden="true">🌱</div>
-
+    <section className="hero" aria-label="Hero section" id="home">
       <div className="hero__inner">
-        {/* ---- Main Content ---- */}
+        {/* ---- Left Column: Content ---- */}
         <div className="hero__content">
           <p className="hero__badge">
             <span className="hero__badge-dot" aria-hidden="true" />
@@ -58,6 +52,20 @@ export default function Hero() {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* ---- Right Column: Image ---- */}
+        <div className="hero__visual">
+          <div className="hero__img-wrap">
+            <Image
+              src={moringaImg}
+              alt="Aroma Agro Foods – 100% Pure Moringa Powder"
+              width={600}
+              height={500}
+              priority
+              className="hero__product-img"
+            />
+          </div>
         </div>
       </div>
     </section>

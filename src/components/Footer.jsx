@@ -1,15 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import logoImg from "../../public/images/logo.png";
 import "../styles/Footer.css";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Quality", href: "/quality" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Products", href: "#products" },
+  { label: "Quality", href: "#quality" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const AVAILABLE_PRODUCTS = [
@@ -29,7 +31,15 @@ export default function Footer() {
       <div className="footer__inner">
         {/* ---- Brand ---- */}
         <div className="footer__brand">
-          <Link href="/" aria-label="Aroma Agro Foods – Home">
+          <a 
+            href="#home" 
+            aria-label="Aroma Agro Foods – Home"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.pushState(null, "", "/");
+            }}
+          >
             <Image
               src={logoImg}
               alt="Aroma Agro Foods logo"
@@ -37,7 +47,7 @@ export default function Footer() {
               height={50}
               className="footer__logo"
             />
-          </Link>
+          </a>
           <p className="footer__tagline">Nourish Naturally. Live Vibrantly.</p>
           <p className="footer__desc">
             Pure, natural food products crafted with care — from farm to your
@@ -71,9 +81,24 @@ export default function Footer() {
           <ul className="footer__links" role="list">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={label}>
-                <Link href={href} className="footer__link">
+                <a 
+                  href={href} 
+                  className="footer__link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const elem = document.getElementById(targetId);
+                    if (elem) {
+                      elem.scrollIntoView({ behavior: "smooth" });
+                      window.history.pushState(null, "", href);
+                    } else if (href === "#home") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.history.pushState(null, "", "/");
+                    }
+                  }}
+                >
                   {label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -85,9 +110,20 @@ export default function Footer() {
           <ul className="footer__links" role="list">
             {AVAILABLE_PRODUCTS.map((name) => (
               <li key={name}>
-                <Link href="#products" className="footer__link">
+                <a 
+                  href="#products" 
+                  className="footer__link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const elem = document.getElementById("products");
+                    if (elem) {
+                      elem.scrollIntoView({ behavior: "smooth" });
+                      window.history.pushState(null, "", "#products");
+                    }
+                  }}
+                >
                   {name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

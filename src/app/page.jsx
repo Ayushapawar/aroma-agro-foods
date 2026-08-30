@@ -1,9 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import PromoBanner from "@/components/PromoBanner";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
+import AboutSection from "@/components/AboutSection";
 import QualitySection from "@/components/QualitySection";
 import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
@@ -22,14 +20,9 @@ export default function HomePage() {
       <Header />
 
       <main id="main-content" tabIndex={-1}>
-        <div id="home">
-          <Hero />
-          <PromoBanner />
-          <WhyChooseUs />
-        </div>
-        
-        <AboutSection />
+        <Hero />
         <ProductsSection />
+        <AboutSection />
         <QualitySection />
         <FaqSection />
         <ContactSection />
