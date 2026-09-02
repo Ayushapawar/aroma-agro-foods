@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import moringaImg from "../../public/images/moringa-product.png";
 import "../styles/Hero.css";
 
 const TRUST_POINTS = [
@@ -52,20 +50,6 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* ---- Right Column: Image ---- */}
-        <div className="hero__visual">
-          <div className="hero__img-wrap">
-            <Image
-              src={moringaImg}
-              alt="Aroma Agro Foods – 100% Pure Moringa Powder"
-              width={600}
-              height={500}
-              priority
-              className="hero__product-img"
-            />
-          </div>
         </div>
       </div>
     </section>
