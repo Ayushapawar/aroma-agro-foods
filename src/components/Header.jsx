@@ -73,17 +73,26 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  /* Handle hash scroll on initial load for Next.js */
+  /* Handle hash scroll on initial load and hashchange for Next.js */
   useEffect(() => {
-    if (window.location.hash) {
-      const targetId = window.location.hash.substring(1);
-      const elem = document.getElementById(targetId);
-      if (elem) {
-        setTimeout(() => {
-          elem.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+    const handleHash = () => {
+      if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          setTimeout(() => {
+            elem.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
       }
-    }
+    };
+    
+    // Run on mount
+    handleHash();
+    
+    // Run on hash changes
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
   return (
