@@ -122,48 +122,6 @@ const VISION_CHIPS = [
 export default function AboutPage() {
   return (
     <section id="about">
-        {/* ================================================
-            1. ABOUT HERO
-            ================================================ */}
-        <section className="about-hero" aria-label="About Aroma Agro Foods">
-          <div className="about-hero__inner">
-            {/* Content */}
-            <div className="about-hero__content">
-              {/* Breadcrumb */}
-              <nav
-                className="about-hero__breadcrumb"
-                aria-label="Breadcrumb navigation"
-              >
-                <Link href="/">Home</Link>
-                <span className="about-hero__breadcrumb-sep" aria-hidden="true">
-                  /
-                </span>
-                <span
-                  className="about-hero__breadcrumb-current"
-                  aria-current="page"
-                >
-                  About Us
-                </span>
-              </nav>
-
-              <p className="about-hero__badge">
-                <span aria-hidden="true">🌿</span>
-                Our Story
-              </p>
-
-              <h1 className="about-hero__heading">
-                About{" "}
-                <span className="about-hero__heading-accent">
-                  Aroma Agro Foods
-                </span>
-              </h1>
-
-              <p className="about-hero__subheading">
-                Nourish Naturally. Live Vibrantly.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* ================================================
             2. OUR STORY
@@ -213,19 +171,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Image */}
-            <div className="about-story__visual">
-              <div className="about-story__img-wrapper">
-                <div className="about-story__img-bg" aria-hidden="true" />
-                <Image
-                  src={moringaImg}
-                  alt="Aroma Agro Foods – Moringa Powder product packaging"
-                  width={900}
-                  height={480}
-                  className="about-story__img"
-                />
-              </div>
-            </div>
           </div>
         </section>
 
@@ -271,96 +216,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ================================================
-            4. PRODUCT RANGE
-            ================================================ */}
-        <section
-          className="about-products"
-          aria-labelledby="products-heading"
-        >
-          <div className="about-products__inner">
-            <header className="about-section-header">
-              <p className="about-eyebrow">Product Range</p>
-              <h2 className="about-section-title" id="products-heading">
-                Natural Goodness in Every Product
-              </h2>
-              <p className="about-section-subtitle">
-                Pure, natural powders crafted from carefully selected
-                ingredients. Simple to use, honest in quality.
-              </p>
-            </header>
-
-            {/* Available now */}
-            <p className="about-products__group-label" aria-label="Available products">
-              ✅ Available Now
-            </p>
-            <ul
-              className="about-products__grid"
-              role="list"
-              aria-label="Currently available products"
-            >
-              {AVAILABLE_PRODUCTS.map((product) => (
-                <li key={product.id} className="product-card">
-                  <span
-                    className="product-card__badge product-card__badge--available"
-                    aria-label="Available now"
-                  >
-                    Available Now
-                  </span>
-
-                  <div className="product-card__img-wrap">
-                    {product.hasImage ? (
-                      <Image
-                        src={product.imageSrc}
-                        alt={`${product.name} – Aroma Agro Foods`}
-                        width={400}
-                        height={400}
-                        className="product-card__img"
-                      />
-                    ) : (
-                      <div
-                        className={`product-card__placeholder ${product.placeholderClass}`}
-                        aria-hidden="true"
-                      >
-                        <span className="product-card__placeholder-icon">
-                          {product.icon}
-                        </span>
-                        <span className="product-card__placeholder-name">
-                          {product.name}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="product-card__body">
-                    <h3 className="product-card__name">{product.name}</h3>
-                    <p className="product-card__desc">{product.desc}</p>
-                    <div className="product-card__actions">
-                      <Link
-                        href="#products"
-                        className="product-card__btn product-card__btn--primary"
-                        aria-label={`View ${product.name}`}
-                      >
-                        View Product
-                      </Link>
-                      <a
-                        href={`https://wa.me/917798281007?text=Hello%20Aroma%20Agro%20Foods%2C%20I%20would%20like%20to%20buy%20${encodeURIComponent(product.name)}%20(100g).%20Please%20share%20the%20order%20details%20and%20payment%20information.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="product-card__btn product-card__btn--outline"
-                        aria-label={`Buy ${product.name}`}
-                      >
-                        🛒 Buy Now
-                      </a>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            
-          </div>
-        </section>
 
         {/* ================================================
             5. PRODUCT JOURNEY
@@ -491,43 +346,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ================================================
-            8. CTA
-            ================================================ */}
-        <section
-          className="about-cta"
-          aria-label="Call to action"
-          id="contact"
-        >
-          <div className="about-cta__inner">
-            <h2 className="about-cta__title">
-              Discover Natural Goodness
-            </h2>
-            <p className="about-cta__subtitle">
-              Explore our range of pure, natural powders — or get in touch
-              to learn more about what we&apos;re creating for you.
-            </p>
-            <div className="about-cta__actions">
-              <Link
-                href="#products"
-                className="about-btn--light"
-                aria-label="Explore our products"
-              >
-                🌿 Explore Products
-              </Link>
-              <a
-                href="https://wa.me/917798281007?text=Hello%20Aroma%20Agro%20Foods%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="about-btn--outline"
-                style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
-                aria-label="Enquire via WhatsApp"
-              >
-                ✉️ Enquire Now
-              </a>
-            </div>
-          </div>
-        </section>
     </section>
   );
 }

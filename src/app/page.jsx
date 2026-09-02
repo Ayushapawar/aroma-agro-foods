@@ -21,8 +21,8 @@ export default function HomePage() {
 
       <main id="main-content" tabIndex={-1}>
         <Hero />
-        <ProductsSection />
         <AboutSection />
+        <ProductsSection />
         <QualitySection />
         <FaqSection />
         <ContactSection />
