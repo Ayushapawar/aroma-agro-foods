@@ -27,6 +27,11 @@ export default function ContactSection() {
       setFormStatus("error");
       return;
     }
+    
+    // Send message via WhatsApp
+    const text = `Hello, I have an enquiry.%0A%0AName: ${formData.name}%0AMobile: ${formData.mobile}%0AEmail: ${formData.email || 'N/A'}%0ASubject: ${formData.subject || 'N/A'}%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/917798281007?text=${text}`, '_blank');
+
     setFormStatus("success");
     setFormData({ name: "", mobile: "", email: "", subject: "", message: "" });
     setTimeout(() => {

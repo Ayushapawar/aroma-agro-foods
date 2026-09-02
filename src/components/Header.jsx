@@ -73,6 +73,19 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  /* Handle hash scroll on initial load for Next.js */
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        setTimeout(() => {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <>
       <header
