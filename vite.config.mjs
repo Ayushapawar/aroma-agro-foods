@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,7 +8,12 @@ export default defineConfig({
   base: '/aroma-agro-foods/',
   resolve: {
     alias: {
-      '@': '/src'
+      '@': path.resolve(import.meta.dirname, './src')
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: path.resolve(import.meta.dirname, 'index-source.html')
     }
   }
 })

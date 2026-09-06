@@ -45,6 +45,9 @@ jobs:
         env:
           GITHUB_PAGES: "true"
 
+      - name: Rename output HTML to index.html
+        run: mv ./dist/index-source.html ./dist/index.html
+
       - name: Add .nojekyll (prevents GitHub from ignoring assets starting with underscore)
         run: touch ./dist/.nojekyll
 
