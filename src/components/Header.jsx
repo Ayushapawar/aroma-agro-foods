@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import logoImg from "../../public/images/logo.png";
+import logoImg from "../assets/images/logo.png";
 import "../styles/Header.css";
 
 const NAV_LINKS = [

@@ -1,8 +1,8 @@
 import React from "react";
-import moringaImg from "../../public/images/moringa-product.png";
-import beetrootImg from "../../public/images/beetroot-product.jpg";
-import carrotImg from "../../public/images/carrot-product.jpg";
-import amlaImg from "../../public/images/amla-product.jpg";
+import moringaImg from "../assets/images/moringa-product.png";
+import beetrootImg from "../assets/images/beetroot-product.jpg";
+import carrotImg from "../assets/images/carrot-product.jpg";
+import amlaImg from "../assets/images/amla-product.jpg";
 import "@/styles/About.css";
 
 /* ============================================================

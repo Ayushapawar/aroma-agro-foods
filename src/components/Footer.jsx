@@ -1,6 +1,6 @@
 "use client";
 
-import logoImg from "../../public/images/logo.png";
+import logoImg from "../assets/images/logo.png";
 import "../styles/Footer.css";
 
 const NAV_LINKS = [

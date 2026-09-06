@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoImg from "../../public/images/logo.png";
+import logoImg from "../assets/images/logo.png";
 import "../styles/SplashScreen.css";
 
 export default function SplashScreen({ onFinish }) {
