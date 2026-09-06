@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoImg from "../../public/images/logo.png";
 import "../styles/SplashScreen.css";
 
 export default function SplashScreen({ onFinish }) {
@@ -21,7 +22,7 @@ export default function SplashScreen({ onFinish }) {
     <div className={`splash-screen ${isFadingOut ? "fade-out" : ""}`}>
       <div className="splash-screen__content">
         <img 
-          src="/images/logo.png" 
+          src={logoImg} 
           alt="Aroma Agro Foods Logo" 
           className="splash-screen__logo" 
         />
