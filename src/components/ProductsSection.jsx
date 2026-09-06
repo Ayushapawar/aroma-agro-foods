@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import moringaImg from "../../public/images/moringa-product.png";
 import beetrootImg from "../../public/images/beetroot-product.jpg";
 import carrotImg from "../../public/images/carrot-product.jpg";
@@ -134,7 +132,7 @@ export default function ProductsPage() {
             <div className="prod-hero__content">
               {/* Breadcrumb */}
               <nav className="prod-hero__breadcrumb" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
+                <a href="/">Home</a>
                 <span className="prod-hero__breadcrumb-sep" aria-hidden="true">/</span>
                 <span className="prod-hero__breadcrumb-current" aria-current="page">
                   Products
@@ -226,7 +224,7 @@ export default function ProductsPage() {
                   {/* Image / Placeholder */}
                   <div className="prod-card__img-wrap">
                     {product.hasImage ? (
-                      <Image
+                      <img
                         src={product.imageSrc}
                         alt={`${product.name} – Aroma Agro Foods`}
                         width={product.featured ? 900 : 400}
@@ -288,13 +286,13 @@ export default function ProductsPage() {
                       >
                         🛒 Buy Now
                       </a>
-                      <Link
+                      <a
                         href="#contact"
                         className="prod-btn--outline"
                         aria-label={`Contact us about ${product.name}`}
                       >
                         📞 Contact Us
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </li>
@@ -356,14 +354,14 @@ export default function ProductsPage() {
               >
                 💬 WhatsApp Us
               </a>
-              <Link
+              <a
                 href="#contact"
                 className="prod-btn--outline"
                 style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
                 aria-label="Go to the contact page"
               >
                 📩 Contact Page
-              </Link>
+              </a>
             </div>
           </div>
         </section>

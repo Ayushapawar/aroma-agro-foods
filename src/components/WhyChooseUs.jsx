@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "../styles/WhyChooseUs.css";
 
 const FEATURES = [
@@ -81,13 +80,13 @@ export default function WhyChooseUs() {
             Join hundreds of health-conscious customers who trust Aroma Agro
             Foods for their daily nutrition.
           </p>
-          <Link
+          <a
             href="#contact"
             className="btn--cta-light"
             aria-label="Get in touch with us"
           >
             🌱 Get in Touch
-          </Link>
+          </a>
         </div>
       </div>
     </section>

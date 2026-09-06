@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "@/styles/Quality.css";
 
 /* ============================================================
@@ -45,7 +44,7 @@ export default function QualityPage() {
         <section className="q-hero" aria-label="Quality page hero">
           <div className="q-hero__inner">
             <nav className="q-hero__breadcrumb" aria-label="Breadcrumb">
-              <Link href="/" className="q-hero__breadcrumb-link">Home</Link>
+              <a href="/" className="q-hero__breadcrumb-link">Home</a>
               <span className="q-hero__breadcrumb-sep" aria-hidden="true">/</span>
               <span className="q-hero__breadcrumb-current" aria-current="page">Quality</span>
             </nav>
@@ -147,9 +146,9 @@ export default function QualityPage() {
                 are happy to help. Visit our Products page or reach out to us
                 directly.
               </p>
-              <Link href="#products" className="q-btn q-btn--outline">
+              <a href="#products" className="q-btn q-btn--outline">
                 View Our Products
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -208,12 +207,12 @@ export default function QualityPage() {
                 ingredients or products.
               </p>
               <div className="q-cta__actions">
-                <Link href="#enquiry" className="q-btn q-btn--white">
+                <a href="#enquiry" className="q-btn q-btn--white">
                   Enquire Now
-                </Link>
-                <Link href="#contact" className="q-btn q-btn--outline-white">
+                </a>
+                <a href="#contact" className="q-btn q-btn--outline-white">
                   Contact Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>

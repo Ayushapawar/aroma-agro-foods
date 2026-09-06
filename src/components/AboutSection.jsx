@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import moringaImg from "../../public/images/moringa-product.png";
 import beetrootImg from "../../public/images/beetroot-product.jpg";
 import carrotImg from "../../public/images/carrot-product.jpg";

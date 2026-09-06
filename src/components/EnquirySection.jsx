@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import "@/styles/Enquiry.css";
 
 export default function EnquiryPage() {
@@ -57,9 +56,9 @@ export default function EnquiryPage() {
         <section className="enquiry-hero" aria-label="Enquiry page hero">
           <div className="enquiry-hero__inner">
             <nav className="enquiry-hero__breadcrumb" aria-label="Breadcrumb">
-              <Link href="/" className="enquiry-hero__breadcrumb-link">
+              <a href="/" className="enquiry-hero__breadcrumb-link">
                 Home
-              </Link>
+              </a>
               <span className="enquiry-hero__breadcrumb-sep" aria-hidden="true">
                 /
               </span>

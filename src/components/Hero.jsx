@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "../styles/Hero.css";
 
 const TRUST_POINTS = [
@@ -31,12 +30,12 @@ export default function Hero() {
           </p>
 
           <div className="hero__actions">
-            <Link href="#products" className="btn--primary">
+            <a href="#products" className="btn--primary">
               Explore Products
-            </Link>
-            <Link href="#enquiry" className="btn--outline">
+            </a>
+            <a href="#enquiry" className="btn--outline">
               Enquire Now
-            </Link>
+            </a>
           </div>
 
           {/* Trust points */}

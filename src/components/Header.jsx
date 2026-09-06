@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import logoImg from "../../public/images/logo.png";
 import "../styles/Header.css";
 
@@ -116,13 +114,13 @@ export default function Header() {
           </button>
 
           {/* ---- Logo ---- */}
-          <Link 
+          <a 
             href="#home" 
             className="header__logo" 
             aria-label="Aroma Agro Foods – Home"
             onClick={(e) => handleScroll(e, "#home")}
           >
-            <Image
+            <img
               src={logoImg}
               alt="Aroma Agro Foods logo"
               width={180}
@@ -130,7 +128,7 @@ export default function Header() {
               priority
               className="header__logo-img"
             />
-          </Link>
+          </a>
 
           {/* ---- Desktop Nav ---- */}
           <nav className="header__nav" aria-label="Primary navigation">

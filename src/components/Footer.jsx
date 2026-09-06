@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import logoImg from "../../public/images/logo.png";
 import "../styles/Footer.css";
 
@@ -38,7 +36,7 @@ export default function Footer() {
               window.history.pushState(null, "", "/");
             }}
           >
-            <Image
+            <img
               src={logoImg}
               alt="Aroma Agro Foods logo"
               width={160}

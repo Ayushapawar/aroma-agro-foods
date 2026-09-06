@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import "@/styles/FAQ.css";
 
 /* ============================================================
@@ -148,7 +147,7 @@ export default function FaqPage() {
         <section className="faq-hero" aria-label="FAQ page hero">
           <div className="faq-hero__inner">
             <nav className="faq-hero__breadcrumb" aria-label="Breadcrumb">
-              <Link href="/" className="faq-hero__breadcrumb-link">Home</Link>
+              <a href="/" className="faq-hero__breadcrumb-link">Home</a>
               <span className="faq-hero__breadcrumb-sep" aria-hidden="true">/</span>
               <span className="faq-hero__breadcrumb-current" aria-current="page">FAQ</span>
             </nav>
@@ -221,12 +220,12 @@ export default function FaqPage() {
               will get back to you as soon as possible.
             </p>
             <div className="faq-cta__actions">
-              <Link href="#enquiry" className="faq-btn faq-btn--white">
+              <a href="#enquiry" className="faq-btn faq-btn--white">
                 Enquire Now
-              </Link>
-              <Link href="#contact" className="faq-btn faq-btn--outline-white">
+              </a>
+              <a href="#contact" className="faq-btn faq-btn--outline-white">
                 Contact Us
-              </Link>
+              </a>
             </div>
           </div>
         </section>
