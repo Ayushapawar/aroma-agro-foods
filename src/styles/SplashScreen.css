@@ -1,0 +1,54 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-screen__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: splashPulse 2s infinite ease-in-out;
+}
+
+.splash-screen__logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.splash-screen__title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 2rem;
+  color: var(--color-green-dark, #1b4332);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+@keyframes splashPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
